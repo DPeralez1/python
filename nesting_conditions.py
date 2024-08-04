@@ -25,15 +25,15 @@ else:
 # otherwise tell them to go to the four seasons
 # If they want a hotel, tell them to go to the nearest Hilton
 
-# location = input("Would you like to stay in a hotel or resort? ").lower()
-# if location == "resort":
-#     max_price = int(input("What is the max price you want to spend per night? "))
-#     if max_price >= 350:
-#         print("Book the Six Senses Resort.")
-#     else:
-#         print("Go to the Four Seasons")
-# else:
-#     print("Go to the nearest Hilton")
+location = input("Would you like to stay in a hotel or resort? ").lower()
+if location == "resort":
+    max_price = int(input("What is the max price you want to spend per night? "))
+    if max_price >= 350:
+        print("Book the Six Senses Resort.")
+    else:
+        print("Go to the Four Seasons")
+else:
+    print("Go to the nearest Hilton")
 
 
 #---------- Challenge 3 ----------
