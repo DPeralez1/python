@@ -12,7 +12,7 @@
 
 
 print("Welcome to Madferit 2.0. Lets get you listening to Oasis!")
-enter = int(input(" 1 - Start. 2 - Quit: "))
+enter = int(input(" 1 - Start or 2 - Quit: "))
 
 if enter == 1:
     albums = (
