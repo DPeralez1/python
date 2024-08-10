@@ -7,35 +7,35 @@
 # -> example "nemo is a fish who lives in the pacific ocean"
 # Create an object and call all 4 methods
 
-# class Animal():
-#     def __init__(self, name, pet, sound):
-#         self.name = name
-#         self.pet = pet
-#         self.sound = sound
+class Animal():
+    def __init__(self, name, pet, sound):
+        self.name = name
+        self.pet = pet
+        self.sound = sound
 
-#     def speak(self):
-#         print(self.sound)
+    def speak(self):
+        print(self.sound)
 
-#     def pet_info(self):
-#         print(f"My {self.pet} {self.name} makes the sound {self.sound}")
+    def pet_info(self):
+        print(f"My {self.pet} {self.name} makes the sound {self.sound}")
 
-# class Fish(Animal):
-#     def swim(self):
-#         if self.sound == None:
-#             print("You are a fish")
-#         else:
-#             print("Are you sure you're a fish? ")
+class Fish(Animal):
+    def swim(self):
+        if self.sound == None:
+            print("You are a fish")
+        else:
+            print("Are you sure you're a fish? ")
 
-#     def ocean(self):
-#         question = input("Which ocean do you live in? ")
-#         print(f"{self.name} is a {self.pet} who lives in {question} ocean")
+    def ocean(self):
+        question = input("Which ocean do you live in? ")
+        print(f"{self.name} is a {self.pet} who lives in {question} ocean")
 
-# nemo = Fish("Nemo", "fish", None)
-# nemo.speak()
-# nemo.pet_info()
+nemo = Fish("Nemo", "fish", None)
+nemo.speak()
+nemo.pet_info()
 
-# nemo.swim()
-# nemo.ocean()
+nemo.swim()
+nemo.ocean()
 
 #---------- Challenge 2 ----------
 # We need a superclass for Vehicles
@@ -56,58 +56,58 @@
 # The 2 other objects using the child class, call 3 or more methods
 # use the child method and get_price method
 
-# class Vehicles():
-#     def __init__(self,make, model, year, price):
-#         self.make = make
-#         self.model = model
-#         self.year = year
-#         self.price = price
+class Vehicles():
+    def __init__(self,make, model, year, price):
+        self.make = make
+        self.model = model
+        self.year = year
+        self.price = price
 
-#     def get_make(self):
-#         if self.make == "ford" or self.make == "chevy" or self.make == "tesla":
-#             return "American Made"
-#         else:
-#             return "Imported"
+    def get_make(self):
+        if self.make == "ford" or self.make == "chevy" or self.make == "tesla":
+            return "American Made"
+        else:
+            return "Imported"
 
-#     def get_model(self):
-#         return self.model
+    def get_model(self):
+        return self.model
 
-#     def get_year(self):
-#         if self.year >= 2000:
-#             return "Car from the 21st century"
-#         else:
-#             return "This car is old!"
+    def get_year(self):
+        if self.year >= 2000:
+            return "Car from the 21st century"
+        else:
+            return "This car is old!"
 
-#     def get_price(self, max_price):
-#         if self.price < max_price:
-#             return "Good buy, within price"
-#         else:
-#             return "Over budget"
+    def get_price(self, max_price):
+        if self.price < max_price:
+            return "Good buy, within price"
+        else:
+            return "Over budget"
 
-# class Style(Vehicles):
-#     def __init__(self, make, model, year, price, num_doors):
-#         super().__init__(make, model, year, price)
-#         self.num_doors = num_doors
+class Style(Vehicles):
+    def __init__(self, make, model, year, price, num_doors):
+        super().__init__(make, model, year, price)
+        self.num_doors = num_doors
 
-#     def get_doors(self):
-#         if self.num_doors == 4:
-#             return "Family car"
-#         else:
-#             return "Sports car"
-
-
-# # truck = Vehicles("ford", "lighting", 2023, 15000)
-# # print(truck.get_make())
-# # print(truck.get_price(12000))
+    def get_doors(self):
+        if self.num_doors == 4:
+            return "Family car"
+        else:
+            return "Sports car"
 
 
-# # car = Style("Toyota", "Camry", 2001, 9000, 4)
-# # print(car.get_doors())
+truck = Vehicles("ford", "lighting", 2023, 15000)
+print(truck.get_make())
+print(truck.get_price(12000))
 
-# sports_car = Style("Lamborghini", "Aventador", 2022, 350000,2)
-# print(sports_car.get_make())
-# print(sports_car.get_price(400000))
-# print(sports_car.get_doors())
+
+car = Style("Toyota", "Camry", 2001, 9000, 4)
+print(car.get_doors())
+
+sports_car = Style("Lamborghini", "Aventador", 2022, 350000,2)
+print(sports_car.get_make())
+print(sports_car.get_price(400000))
+print(sports_car.get_doors())
 
 
 #---------- Challenge 3 ----------
